@@ -12,9 +12,15 @@
   --text-color: #ffff;
 }
 
-body {
+::-webkit-scrollbar {
+  display: none;
+}
+
+body, html {
   height: 100vh;
-  background-color: var(--bg-color);
+  margin: 0;
+  height: 100%;
+  /* overflow: hidden; */
 }
 
 .navBar {
@@ -80,3 +86,31 @@ body {
   cursor: pointer;
 }
 
+.loadingPanel{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(240, 240, 240, 1); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#container{
+  display: grid;
+  height: 100vh;
+}
+#main {
+  background-color: #f4f4f4;
+}
+
+#prices {
+  background-color: #e0e0e0;
+}
+
+#help {
+  background-color: #c0c0c0;
+}
