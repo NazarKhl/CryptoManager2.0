@@ -1,10 +1,12 @@
 export default function App() {
   return (
     <>
-      <div className="main-panel flex h-screen">
-        <div className="fixed lg:w-1/12 top-16 h-full border-r-2  p-4">
-          
-        </div>
+      <div className="navBar">
+        <p className="navBarLinks dashboardPanel">Dashboard</p>
+        <p className="navBarLinks portfolioPanel">Portfolio</p>
+        <p className="navBarLinks pricesPanel">Prices</p>
+        <p className="navBarLinks helpPanel">Help Suport</p>
+        
       </div>
     </>
   );
