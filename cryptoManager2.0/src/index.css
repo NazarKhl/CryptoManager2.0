@@ -1,14 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
   --bg-color: #f1ecec;
-  --btn-color: #5fbef3;
+  --btn-color: #04527c;
   --progfit-color: #b2f35f;
   --lose-color: #c72a1f;
   --text-color: #ffff;
@@ -28,7 +26,7 @@ body {
   align-items: center;
 }
 
-.navBarLinks{
+.navBarLinks {
   display: inline-block;
   position: relative;
   margin-left: 100px;
@@ -36,3 +34,49 @@ body {
   font-style: italic;
   font-weight: 400;
 }
+
+.bellBorder {
+  position: absolute;
+  right: 170px;
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 10px;
+}
+
+.bellIcon {
+  font-size: 20px;
+  padding: 3px;
+  color: rgb(103, 102, 102);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.bellIcon:hover{
+  font-size: 23px;
+  transition: 0.3s;
+}
+
+.accountSettings{
+  position: absolute;
+  right: 90px;
+}
+
+.navBarLinks::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; 
+  width: 0; 
+  height: 2px; 
+  background-color: var(--btn-color);
+  transition: width 0.6s ease;
+}
+
+.navBarLinks:hover::after{
+  width: 100%;
+}
+
+.navBarLinks:hover{
+  color: var(--btn-color);
+  cursor: pointer;
+}
+
